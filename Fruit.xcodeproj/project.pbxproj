@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		ADA2C48E299B42CC00191610 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2C48D299B42CC00191610 /* CustomTableViewCell.swift */; };
-		ADA2C490299B46AB00191610 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2C48F299B46AB00191610 /* ViewModel.swift */; };
-		ADA2C492299B48A400191610 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2C491299B48A400191610 /* Model.swift */; };
+		ADA2C490299B46AB00191610 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2C48F299B46AB00191610 /* MainViewModel.swift */; };
+		ADA2C492299B48A400191610 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2C491299B48A400191610 /* MainModel.swift */; };
+		ADBA5B28299CEA3C00D4A4F8 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADBA5B27299CEA3C00D4A4F8 /* Start.storyboard */; };
+		ADBA5B2A299CEB2300D4A4F8 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBA5B29299CEB2300D4A4F8 /* StartViewController.swift */; };
 		ADD63311299A1BB000CDD814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD63310299A1BB000CDD814 /* AppDelegate.swift */; };
 		ADD63313299A1BB000CDD814 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD63312299A1BB000CDD814 /* SceneDelegate.swift */; };
-		ADD63315299A1BB000CDD814 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD63314299A1BB000CDD814 /* ViewController.swift */; };
+		ADD63315299A1BB000CDD814 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD63314299A1BB000CDD814 /* MainViewController.swift */; };
 		ADD63318299A1BB000CDD814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD63316299A1BB000CDD814 /* Main.storyboard */; };
 		ADD6331A299A1BB200CDD814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD63319299A1BB200CDD814 /* Assets.xcassets */; };
 		ADD6331D299A1BB200CDD814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD6331B299A1BB200CDD814 /* LaunchScreen.storyboard */; };
@@ -22,12 +24,14 @@
 
 /* Begin PBXFileReference section */
 		ADA2C48D299B42CC00191610 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		ADA2C48F299B46AB00191610 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		ADA2C491299B48A400191610 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		ADA2C48F299B46AB00191610 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		ADA2C491299B48A400191610 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		ADBA5B27299CEA3C00D4A4F8 /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
+		ADBA5B29299CEB2300D4A4F8 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		ADD6330D299A1BB000CDD814 /* Fruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD63310299A1BB000CDD814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADD63312299A1BB000CDD814 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ADD63314299A1BB000CDD814 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADD63314299A1BB000CDD814 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ADD63317299A1BB000CDD814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADD63319299A1BB200CDD814 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADD6331C299A1BB200CDD814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,12 +73,21 @@
 			isa = PBXGroup;
 			children = (
 				ADD63316299A1BB000CDD814 /* Main.storyboard */,
-				ADD63314299A1BB000CDD814 /* ViewController.swift */,
-				ADA2C48F299B46AB00191610 /* ViewModel.swift */,
-				ADA2C491299B48A400191610 /* Model.swift */,
+				ADD63314299A1BB000CDD814 /* MainViewController.swift */,
+				ADA2C48F299B46AB00191610 /* MainViewModel.swift */,
+				ADA2C491299B48A400191610 /* MainModel.swift */,
 				ADA2C48D299B42CC00191610 /* CustomTableViewCell.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		ADBA5B26299CE9FF00D4A4F8 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				ADBA5B27299CEA3C00D4A4F8 /* Start.storyboard */,
+				ADBA5B29299CEB2300D4A4F8 /* StartViewController.swift */,
+			);
+			path = Start;
 			sourceTree = "<group>";
 		};
 		ADD63304299A1BB000CDD814 = {
@@ -96,6 +109,7 @@
 		ADD6330F299A1BB000CDD814 /* Fruit */ = {
 			isa = PBXGroup;
 			children = (
+				ADBA5B26299CE9FF00D4A4F8 /* Start */,
 				ADBA5B25299CBFB000D4A4F8 /* Main */,
 				ADBA5B24299CBF9000D4A4F8 /* FruitWebView */,
 				ADBA5B23299CBEC400D4A4F8 /* Supporting Files */,
@@ -166,6 +180,7 @@
 			files = (
 				ADD6331D299A1BB200CDD814 /* LaunchScreen.storyboard in Resources */,
 				ADED7667299B864A00434648 /* FruitWebView.storyboard in Resources */,
+				ADBA5B28299CEA3C00D4A4F8 /* Start.storyboard in Resources */,
 				ADD6331A299A1BB200CDD814 /* Assets.xcassets in Resources */,
 				ADD63318299A1BB000CDD814 /* Main.storyboard in Resources */,
 			);
@@ -178,10 +193,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADA2C490299B46AB00191610 /* ViewModel.swift in Sources */,
-				ADD63315299A1BB000CDD814 /* ViewController.swift in Sources */,
+				ADA2C490299B46AB00191610 /* MainViewModel.swift in Sources */,
+				ADBA5B2A299CEB2300D4A4F8 /* StartViewController.swift in Sources */,
+				ADD63315299A1BB000CDD814 /* MainViewController.swift in Sources */,
 				ADD63311299A1BB000CDD814 /* AppDelegate.swift in Sources */,
-				ADA2C492299B48A400191610 /* Model.swift in Sources */,
+				ADA2C492299B48A400191610 /* MainModel.swift in Sources */,
 				ADED7669299B879800434648 /* FruitWebViewViewController.swift in Sources */,
 				ADA2C48E299B42CC00191610 /* CustomTableViewCell.swift in Sources */,
 				ADD63313299A1BB000CDD814 /* SceneDelegate.swift in Sources */,
