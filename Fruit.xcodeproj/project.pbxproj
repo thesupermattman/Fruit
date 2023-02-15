@@ -8,16 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		ADA2C48E299B42CC00191610 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2C48D299B42CC00191610 /* CustomTableViewCell.swift */; };
+		ADA2C490299B46AB00191610 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2C48F299B46AB00191610 /* ViewModel.swift */; };
+		ADA2C492299B48A400191610 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2C491299B48A400191610 /* Model.swift */; };
 		ADD63311299A1BB000CDD814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD63310299A1BB000CDD814 /* AppDelegate.swift */; };
 		ADD63313299A1BB000CDD814 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD63312299A1BB000CDD814 /* SceneDelegate.swift */; };
 		ADD63315299A1BB000CDD814 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD63314299A1BB000CDD814 /* ViewController.swift */; };
 		ADD63318299A1BB000CDD814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD63316299A1BB000CDD814 /* Main.storyboard */; };
 		ADD6331A299A1BB200CDD814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD63319299A1BB200CDD814 /* Assets.xcassets */; };
 		ADD6331D299A1BB200CDD814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD6331B299A1BB200CDD814 /* LaunchScreen.storyboard */; };
+		ADED7667299B864A00434648 /* FruitWebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADED7666299B864A00434648 /* FruitWebView.storyboard */; };
+		ADED7669299B879800434648 /* FruitWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADED7668299B879800434648 /* FruitWebViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ADA2C48D299B42CC00191610 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		ADA2C48F299B46AB00191610 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		ADA2C491299B48A400191610 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		ADD6330D299A1BB000CDD814 /* Fruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD63310299A1BB000CDD814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADD63312299A1BB000CDD814 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +32,8 @@
 		ADD63319299A1BB200CDD814 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADD6331C299A1BB200CDD814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADD6331E299A1BB200CDD814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADED7666299B864A00434648 /* FruitWebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FruitWebView.storyboard; sourceTree = "<group>"; };
+		ADED7668299B879800434648 /* FruitWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitWebViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,10 @@
 				ADD6331B299A1BB200CDD814 /* LaunchScreen.storyboard */,
 				ADD6331E299A1BB200CDD814 /* Info.plist */,
 				ADA2C48D299B42CC00191610 /* CustomTableViewCell.swift */,
+				ADA2C48F299B46AB00191610 /* ViewModel.swift */,
+				ADA2C491299B48A400191610 /* Model.swift */,
+				ADED7666299B864A00434648 /* FruitWebView.storyboard */,
+				ADED7668299B879800434648 /* FruitWebViewViewController.swift */,
 			);
 			path = Fruit;
 			sourceTree = "<group>";
@@ -129,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD6331D299A1BB200CDD814 /* LaunchScreen.storyboard in Resources */,
+				ADED7667299B864A00434648 /* FruitWebView.storyboard in Resources */,
 				ADD6331A299A1BB200CDD814 /* Assets.xcassets in Resources */,
 				ADD63318299A1BB000CDD814 /* Main.storyboard in Resources */,
 			);
@@ -141,8 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA2C490299B46AB00191610 /* ViewModel.swift in Sources */,
 				ADD63315299A1BB000CDD814 /* ViewController.swift in Sources */,
 				ADD63311299A1BB000CDD814 /* AppDelegate.swift in Sources */,
+				ADA2C492299B48A400191610 /* Model.swift in Sources */,
+				ADED7669299B879800434648 /* FruitWebViewViewController.swift in Sources */,
 				ADA2C48E299B42CC00191610 /* CustomTableViewCell.swift in Sources */,
 				ADD63313299A1BB000CDD814 /* SceneDelegate.swift in Sources */,
 			);
