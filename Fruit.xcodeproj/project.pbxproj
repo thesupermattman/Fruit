@@ -47,6 +47,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ADBA5B23299CBEC400D4A4F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADD63310299A1BB000CDD814 /* AppDelegate.swift */,
+				ADD6331B299A1BB200CDD814 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ADBA5B24299CBF9000D4A4F8 /* FruitWebView */ = {
+			isa = PBXGroup;
+			children = (
+				ADED7666299B864A00434648 /* FruitWebView.storyboard */,
+				ADED7668299B879800434648 /* FruitWebViewViewController.swift */,
+			);
+			path = FruitWebView;
+			sourceTree = "<group>";
+		};
+		ADBA5B25299CBFB000D4A4F8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				ADD63316299A1BB000CDD814 /* Main.storyboard */,
+				ADD63314299A1BB000CDD814 /* ViewController.swift */,
+				ADA2C48F299B46AB00191610 /* ViewModel.swift */,
+				ADA2C491299B48A400191610 /* Model.swift */,
+				ADA2C48D299B42CC00191610 /* CustomTableViewCell.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		ADD63304299A1BB000CDD814 = {
 			isa = PBXGroup;
 			children = (
@@ -66,18 +96,12 @@
 		ADD6330F299A1BB000CDD814 /* Fruit */ = {
 			isa = PBXGroup;
 			children = (
-				ADD63310299A1BB000CDD814 /* AppDelegate.swift */,
+				ADBA5B25299CBFB000D4A4F8 /* Main */,
+				ADBA5B24299CBF9000D4A4F8 /* FruitWebView */,
+				ADBA5B23299CBEC400D4A4F8 /* Supporting Files */,
 				ADD63312299A1BB000CDD814 /* SceneDelegate.swift */,
-				ADD63314299A1BB000CDD814 /* ViewController.swift */,
-				ADD63316299A1BB000CDD814 /* Main.storyboard */,
 				ADD63319299A1BB200CDD814 /* Assets.xcassets */,
-				ADD6331B299A1BB200CDD814 /* LaunchScreen.storyboard */,
 				ADD6331E299A1BB200CDD814 /* Info.plist */,
-				ADA2C48D299B42CC00191610 /* CustomTableViewCell.swift */,
-				ADA2C48F299B46AB00191610 /* ViewModel.swift */,
-				ADA2C491299B48A400191610 /* Model.swift */,
-				ADED7666299B864A00434648 /* FruitWebView.storyboard */,
-				ADED7668299B879800434648 /* FruitWebViewViewController.swift */,
 			);
 			path = Fruit;
 			sourceTree = "<group>";
