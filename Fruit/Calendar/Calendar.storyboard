@@ -16,22 +16,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zKR-Os-py8">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zKR-Os-py8">
                                 <rect key="frame" x="133" y="59" width="127" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="English"/>
                                     <segment title="Thai"/>
                                 </segments>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fsj-qM-8ev">
+                                <rect key="frame" x="0.0" y="110" width="393" height="708"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="145" id="1VS-r1-Fzy" customClass="CalendarTableViewCell" customModule="Fruit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="145"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1VS-r1-Fzy" id="Naa-TW-Gcs">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="145"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxW-6p-MyC">
+                                                    <rect key="frame" x="20" y="11" width="353" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDC-yu-gdB">
+                                                    <rect key="frame" x="20" y="42" width="353" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hxW-6p-MyC" firstAttribute="leading" secondItem="Naa-TW-Gcs" secondAttribute="leadingMargin" id="G6t-JU-8sU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="WDC-yu-gdB" secondAttribute="trailing" id="Kki-P2-VBA"/>
+                                                <constraint firstItem="hxW-6p-MyC" firstAttribute="top" secondItem="Naa-TW-Gcs" secondAttribute="topMargin" id="T7o-rj-aYw"/>
+                                                <constraint firstItem="WDC-yu-gdB" firstAttribute="leading" secondItem="Naa-TW-Gcs" secondAttribute="leadingMargin" id="Wvz-Q0-l1S"/>
+                                                <constraint firstItem="WDC-yu-gdB" firstAttribute="top" secondItem="hxW-6p-MyC" secondAttribute="bottom" constant="10" id="i5W-5t-RJi"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hxW-6p-MyC" secondAttribute="trailing" id="lIU-Hf-bVA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="hxW-6p-MyC" id="X5x-V0-YnQ"/>
+                                            <outlet property="holidayDescriptionLabel" destination="WDC-yu-gdB" id="T7h-JL-8WU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="fsj-qM-8ev" secondAttribute="bottom" id="8Km-7b-vU4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fsj-qM-8ev" secondAttribute="trailing" id="8XO-Vj-zCx"/>
+                            <constraint firstItem="fsj-qM-8ev" firstAttribute="top" secondItem="zKR-Os-py8" secondAttribute="bottom" constant="20" id="FPN-28-Rbp"/>
+                            <constraint firstItem="zKR-Os-py8" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="GZP-qB-xbg"/>
+                            <constraint firstItem="fsj-qM-8ev" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="PHW-Up-p9s"/>
+                            <constraint firstItem="zKR-Os-py8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="nuA-i0-g5K"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calendarTableView" destination="fsj-qM-8ev" id="PK5-yj-AOr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="-2"/>
+            <point key="canvasLocation" x="139.69465648854961" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>

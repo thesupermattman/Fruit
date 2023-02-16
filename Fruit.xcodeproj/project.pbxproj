@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD36E056299E0E9000C813A7 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E055299E0E9000C813A7 /* CalendarTableViewCell.swift */; };
+		AD36E058299E187400C813A7 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E057299E187400C813A7 /* CalendarViewModel.swift */; };
+		AD36E05A299E188D00C813A7 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E059299E188D00C813A7 /* CalendarModel.swift */; };
 		AD8817BB299DDE0500DDFE53 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8817BA299DDE0500DDFE53 /* Calendar.storyboard */; };
 		AD8817BD299DDE1600DDFE53 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8817BC299DDE1600DDFE53 /* CalendarViewController.swift */; };
 		ADA2C48E299B42CC00191610 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2C48D299B42CC00191610 /* CustomTableViewCell.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD36E055299E0E9000C813A7 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
+		AD36E057299E187400C813A7 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		AD36E059299E188D00C813A7 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
 		AD8817BA299DDE0500DDFE53 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		AD8817BC299DDE1600DDFE53 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		ADA2C48D299B42CC00191610 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -60,6 +66,9 @@
 			children = (
 				AD8817BA299DDE0500DDFE53 /* Calendar.storyboard */,
 				AD8817BC299DDE1600DDFE53 /* CalendarViewController.swift */,
+				AD36E057299E187400C813A7 /* CalendarViewModel.swift */,
+				AD36E059299E188D00C813A7 /* CalendarModel.swift */,
+				AD36E055299E0E9000C813A7 /* CalendarTableViewCell.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -211,11 +220,14 @@
 				ADA2C490299B46AB00191610 /* MainViewModel.swift in Sources */,
 				ADBA5B2A299CEB2300D4A4F8 /* StartViewController.swift in Sources */,
 				ADD63315299A1BB000CDD814 /* MainViewController.swift in Sources */,
+				AD36E05A299E188D00C813A7 /* CalendarModel.swift in Sources */,
+				AD36E056299E0E9000C813A7 /* CalendarTableViewCell.swift in Sources */,
 				ADD63311299A1BB000CDD814 /* AppDelegate.swift in Sources */,
 				ADA2C492299B48A400191610 /* MainModel.swift in Sources */,
 				ADED7669299B879800434648 /* FruitWebViewViewController.swift in Sources */,
 				AD8817BD299DDE1600DDFE53 /* CalendarViewController.swift in Sources */,
 				ADA2C48E299B42CC00191610 /* CustomTableViewCell.swift in Sources */,
+				AD36E058299E187400C813A7 /* CalendarViewModel.swift in Sources */,
 				ADD63313299A1BB000CDD814 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
