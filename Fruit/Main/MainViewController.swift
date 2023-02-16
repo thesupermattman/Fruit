@@ -51,8 +51,8 @@ extension ViewController: UITableViewDelegate {
         let storyBoard: UIStoryboard = UIStoryboard(name: "FruitWebView", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "FruitWebView") as! FruitWebViewViewController
         newViewController.urlString = url
-        self.present(newViewController, animated: true, completion: nil)
-        
+        self.navigationController?.pushViewController(newViewController, animated: true)
+
         print("Index path row = " + String(indexPath.row))
     }
 }
