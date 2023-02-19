@@ -39,6 +39,7 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = calendarTableView.dequeueReusableCell(withIdentifier: "calendarCell", for: indexPath) as! CalendarTableViewCell
         
         calendarList[indexPath.row].date = calendarViewModel.dateConversion(date: calendarList[indexPath.row].date)
+        // let newDate = calendarViewModel.dateConversion(for: indexPath)
 
         cell.dateLabel.text = calendarList[indexPath.row].date
         cell.holidayDescriptionLabel.text = calendarList[indexPath.row].description
