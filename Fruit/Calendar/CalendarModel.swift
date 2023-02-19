@@ -10,7 +10,11 @@ import Foundation
 extension CalendarViewModel {
     
     struct Response: Codable {
-        let date: String
+        var date: String
         let description: String
+    }
+    
+    struct Hello {
+        let formattedDate: Date
     }
 }
