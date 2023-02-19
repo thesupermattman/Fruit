@@ -19,9 +19,6 @@ class ViewController: UIViewController {
         table.dataSource = self
         table.delegate = self
     }
-    
-    
-    
 }
 
 extension ViewController: UITableViewDataSource {
