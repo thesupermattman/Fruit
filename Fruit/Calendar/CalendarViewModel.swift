@@ -11,7 +11,7 @@ import UIKit
 
 class CalendarViewModel {
 
-    let url = "https://www.set.or.th/api/set/holiday/year/2023?lang=th"
+    var url = "https://www.set.or.th/api/set/holiday/year/2023?lang=th"
     
     func getData(url: String, callBack: @escaping ([Response]?) -> Void) {
         

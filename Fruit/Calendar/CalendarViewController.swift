@@ -21,6 +21,18 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
         calendarTableView.delegate = self
         calendarViewModel.getData(url: calendarViewModel.url, callBack: getCalendarCallback)
     }
+    
+    @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            calendarViewModel.url = "https://www.set.or.th/api/set/holiday/year/2023?lang=th"
+            calendarViewModel.getData(url: calendarViewModel.url, callBack: getCalendarCallback)
+
+        } else if sender.selectedSegmentIndex == 1 { // If selectedSegementIdex == 1
+            calendarViewModel.url = "https://www.set.or.th/api/set/holiday/year/2023?lang=en"
+            calendarViewModel.getData(url: calendarViewModel.url, callBack: getCalendarCallback)
+        }
+    }
+    
 
     private func getCalendarCallback(calendarList: [CalendarViewModel.Response]?) {
 //        print(calendarList)
@@ -39,11 +51,9 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = calendarTableView.dequeueReusableCell(withIdentifier: "calendarCell", for: indexPath) as! CalendarTableViewCell
         
         let newDate = calendarViewModel.dateConversion(date: calendarList[indexPath.row].date)
-        // let newDate = calendarViewModel.dateConversion(for: indexPath)
 
         cell.dateLabel.text = newDate
         cell.holidayDescriptionLabel.text = calendarList[indexPath.row].description
-//        Date.format
         return cell
     }
     
