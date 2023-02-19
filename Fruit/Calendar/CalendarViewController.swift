@@ -38,10 +38,10 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { // This is to get that cell for each of the rows
         let cell = calendarTableView.dequeueReusableCell(withIdentifier: "calendarCell", for: indexPath) as! CalendarTableViewCell
         
-        calendarList[indexPath.row].date = calendarViewModel.dateConversion(date: calendarList[indexPath.row].date)
+        let newDate = calendarViewModel.dateConversion(date: calendarList[indexPath.row].date)
         // let newDate = calendarViewModel.dateConversion(for: indexPath)
 
-        cell.dateLabel.text = calendarList[indexPath.row].date
+        cell.dateLabel.text = newDate
         cell.holidayDescriptionLabel.text = calendarList[indexPath.row].description
 //        Date.format
         return cell
