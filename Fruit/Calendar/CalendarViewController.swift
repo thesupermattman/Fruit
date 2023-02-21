@@ -65,7 +65,7 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
 }
 
 // To do
-// Fix tableview but set heightforrow at 0 (Partially complete)
+// Fix tableview but set heightforrow at 0 (Completed)
 // Fix the date format dd DD MM yyyy (Completed)
 // Fix the english/thai function (Completed)
 
@@ -82,7 +82,6 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
 // Try to understand callback more
 
 // To Do
-// Fix didChangeSegment by putting a lot of it in the CalendarViewModel
-// Change the Thai date format to Thai language
-// Research what is deeplink
-// Read the rx files
+// Find the difference between merge and rebase. Try playing the game perhaps (Wednesday)
+// Read Pushing, Popping, Presenting, & Dismissing ViewControllers article carefully (Wednesday)
+// Read part 2 of rx and try to update it in my project (Thursday)
