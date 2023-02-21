@@ -36,6 +36,18 @@ class CalendarViewModel {
         task.resume()
     }
     
+    func segragation(_ sender: UISegmentedControl) -> String {
+        if sender.selectedSegmentIndex == 0 {
+            url = "https://www.set.or.th/api/set/holiday/year/2023?lang=th"
+            return url
+        } else if sender.selectedSegmentIndex == 1 { // If selectedSegementIdex == 1
+            url = "https://www.set.or.th/api/set/holiday/year/2023?lang=en"
+            return url
+        } else {
+            return ""
+        }
+    }
+    
     func dateConversionTh(date dateFromServer: String) -> String {
         
         let dateFormatter = DateFormatter()
