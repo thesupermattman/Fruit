@@ -36,7 +36,18 @@ class CalendarViewModel {
         task.resume()
     }
     
-    func dateConversion(date dateFromServer: String) -> String {
+    func dateConversionTh(date dateFromServer: String) -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let date = dateFormatter.date(from: dateFromServer)!
+        dateFormatter.locale = Locale(identifier: "th_TH")
+        dateFormatter.dateFormat = "dd-MMM-yyyy"
+        let formattedDate = dateFormatter.string(from: date)
+        return formattedDate
+    }
+    
+    func dateConversionEn(date dateFromServer: String) -> String {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
