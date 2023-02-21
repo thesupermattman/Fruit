@@ -23,10 +23,7 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
-
-        calendarViewModel.segragation(sender)
-        calendarViewModel.getData(url: calendarViewModel.url, callBack: getCalendarCallback)
-
+        calendarViewModel.getData(url: calendarViewModel.segragation(sender), callBack: getCalendarCallback)
     }
     
 
