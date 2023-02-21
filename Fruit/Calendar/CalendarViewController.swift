@@ -15,6 +15,8 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
     
     private var calendarList: [CalendarViewModel.Response] = []
         
+    @IBOutlet weak var calendarSegmentControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         calendarTableView.dataSource = self
@@ -43,9 +45,16 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { // This is to get that cell for each of the rows
         let cell = calendarTableView.dequeueReusableCell(withIdentifier: "calendarCell", for: indexPath) as! CalendarTableViewCell
         
-        let newDate = calendarViewModel.dateConversionTh(date: calendarList[indexPath.row].date)
-        
-        cell.dateLabel.text = newDate
+//        let segmentIndex = calendarSegmentControl.selectedSegmentIndex
+//        if segmentIndex == 0 {
+//            let newDate = calendarViewModel.dateConversionTh(date: calendarList[indexPath.row].date)
+//            cell.dateLabel.text = newDate
+//        } else {
+//            let newDate = calendarViewModel.dateConversionEn(date: calendarList[indexPath.row].date)
+//            cell.dateLabel.text = newDate
+//        }
+        cell.dateLabel.text = calendarViewModel.dateConversion(date: calendarList[indexPath.row].date,
+                                                               index: calendarSegmentControl.selectedSegmentIndex)
         cell.holidayDescriptionLabel.text = calendarList[indexPath.row].description
         return cell
     }

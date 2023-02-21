@@ -80,6 +80,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="calendarSegmentControl" destination="zKR-Os-py8" id="c3l-Bq-aH9"/>
                         <outlet property="calendarTableView" destination="fsj-qM-8ev" id="PK5-yj-AOr"/>
                     </connections>
                 </viewController>
