@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var fruitWebView = FruitWebViewViewController()
     
     var goodbye = "Goodbye"
+    var greeting = "Hello"
         
     @IBOutlet weak var table: UITableView!
         
