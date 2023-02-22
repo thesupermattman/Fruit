@@ -11,10 +11,7 @@ class ViewController: UIViewController {
     
     var viewModel = ViewModel()
     var fruitWebView = FruitWebViewViewController()
-    
-    var goodbye = "Goodbye"
-    var greeting = "Hello"
-        
+            
     @IBOutlet weak var table: UITableView!
         
     override func viewDidLoad() {
