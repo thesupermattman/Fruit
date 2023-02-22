@@ -25,9 +25,13 @@
 		ADD6331D299A1BB200CDD814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD6331B299A1BB200CDD814 /* LaunchScreen.storyboard */; };
 		ADED7667299B864A00434648 /* FruitWebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADED7666299B864A00434648 /* FruitWebView.storyboard */; };
 		ADED7669299B879800434648 /* FruitWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADED7668299B879800434648 /* FruitWebViewViewController.swift */; };
+		BFEACFC519B1A5952C9BB80D /* Pods_Fruit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AF4C60B4B77B7ABE02754B /* Pods_Fruit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4734099C4E37DCDA378CE1D2 /* Pods-Fruit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fruit.debug.xcconfig"; path = "Target Support Files/Pods-Fruit/Pods-Fruit.debug.xcconfig"; sourceTree = "<group>"; };
+		63C830CE1214352CD4769507 /* Pods-Fruit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fruit.release.xcconfig"; path = "Target Support Files/Pods-Fruit/Pods-Fruit.release.xcconfig"; sourceTree = "<group>"; };
+		69AF4C60B4B77B7ABE02754B /* Pods_Fruit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fruit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD36E055299E0E9000C813A7 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		AD36E057299E187400C813A7 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		AD36E059299E188D00C813A7 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
@@ -55,12 +59,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFEACFC519B1A5952C9BB80D /* Pods_Fruit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10CD6E5947059D8CB5B39759 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69AF4C60B4B77B7ABE02754B /* Pods_Fruit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AD8817B9299DDDD100DDFE53 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +130,8 @@
 			children = (
 				ADD6330F299A1BB000CDD814 /* Fruit */,
 				ADD6330E299A1BB000CDD814 /* Products */,
+				C84862FAD639E7182D2E904C /* Pods */,
+				10CD6E5947059D8CB5B39759 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +158,16 @@
 			path = Fruit;
 			sourceTree = "<group>";
 		};
+		C84862FAD639E7182D2E904C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4734099C4E37DCDA378CE1D2 /* Pods-Fruit.debug.xcconfig */,
+				63C830CE1214352CD4769507 /* Pods-Fruit.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADD63321299A1BB200CDD814 /* Build configuration list for PBXNativeTarget "Fruit" */;
 			buildPhases = (
+				6C6D0F53BF687540E3400FF8 /* [CP] Check Pods Manifest.lock */,
 				ADD63309299A1BB000CDD814 /* Sources */,
 				ADD6330A299A1BB000CDD814 /* Frameworks */,
 				ADD6330B299A1BB000CDD814 /* Resources */,
+				E4795890EE375C4436E5B4C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -211,6 +238,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6C6D0F53BF687540E3400FF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fruit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4795890EE375C4436E5B4C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fruit/Pods-Fruit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fruit/Pods-Fruit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fruit/Pods-Fruit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ADD63309299A1BB000CDD814 /* Sources */ = {
@@ -370,6 +439,7 @@
 		};
 		ADD63322299A1BB200CDD814 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4734099C4E37DCDA378CE1D2 /* Pods-Fruit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -398,6 +468,7 @@
 		};
 		ADD63323299A1BB200CDD814 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63C830CE1214352CD4769507 /* Pods-Fruit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
