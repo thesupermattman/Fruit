@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     var viewModel = ViewModel()
     var fruitWebView = FruitWebViewViewController()
+    var greeting = "Hello"
         
     @IBOutlet weak var table: UITableView!
         
