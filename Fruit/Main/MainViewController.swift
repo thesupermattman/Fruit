@@ -27,31 +27,13 @@ class ViewController: UIViewController {
     }
     
     private func observeObservable() {
-//        table.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        
-//        viewModel.items.bind(to: table.rx.items(cellIdentifier: "cell", cellType: CustomTableViewCell.self)) { (row,item,cell) in
-//            cell.label?.text = title
-//            cell.iconImageView?.image = UIImage(named: viewModel.imageName)
-//        }.disposed(by: bag)
-//
-//        table.rx.modelSelected(Fruit.self).subscribe(onNext: { item in
-//            print()
-//        }).disposed(by: bag)
-//
+
         viewModel.itemBehaviorSubject.subscribe(onNext: { fruitList in
             self.fruit = fruitList
             self.table.reloadData()
         })
     }
 }
-
-//extension ViewController: UITableViewDelegate {
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 150
-//    }
-//
-//}
 
 extension ViewController: UITableViewDataSource {
 

@@ -33,20 +33,7 @@ class ViewModel {
     func fetchItems() {
         
         itemObservable.onNext(fruit)
-        //itemObservable.onCompleted()
     }
-//
-//        func getData(for indexPath: IndexPath) -> Fruit {
-//        return fetchItems()
-//    }
-//
-//    func getDataCount() -> Int {
-//        return data.count
-//    }
-//
-//    func getFruitUrl(for indexPath: IndexPath) -> String {
-//        return data[indexPath.row].url
-//    }
 }
 
 // Find out difference between publishSubject and behaviorSubject
