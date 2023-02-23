@@ -66,38 +66,6 @@
             endingLineNumber = "25"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "840DB82F-65D3-4468-9D11-E465FA969F27 - c525205f7f5b222d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Fruit.CalendarViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Fruit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/arthithai.aamlid/Documents/Learning/IOS/Fruit/Fruit/Calendar/CalendarViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "498">
-               </Location>
-               <Location
-                  uuid = "840DB82F-65D3-4468-9D11-E465FA969F27 - 43b81779e4d78aa"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #2 (Swift.Optional&lt;Swift.Array&lt;Fruit.CalendarViewModel.Response&gt;&gt;) -&gt; () in implicit closure #1 (Fruit.CalendarViewController) -&gt; (Swift.Optional&lt;Swift.Array&lt;Fruit.CalendarViewModel.Response&gt;&gt;) -&gt; () in Fruit.CalendarViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Fruit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/arthithai.aamlid/Documents/Learning/IOS/Fruit/Fruit/Calendar/CalendarViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "37">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
