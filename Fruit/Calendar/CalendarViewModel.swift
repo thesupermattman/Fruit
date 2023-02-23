@@ -7,7 +7,8 @@
 
 import Foundation
 import UIKit
-
+import RxSwift
+import RxCocoa
 
 class CalendarViewModel {
 
@@ -15,27 +16,22 @@ class CalendarViewModel {
     
     var isThai = true
     
-    func getData(url: String, callBack: @escaping ([Response]?) -> Void) {
-        
-        let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, response, error in
-            guard let data = data, error == nil else {
-                print("something went wrong")
-                return
+    let disposeBag = DisposeBag()
+    let response: BehaviorRelay<[Response]> = BehaviorRelay(value: [])
+    
+    func fetchData() {
+       if let url = URL(string: "https://www.set.or.th/api/set/holiday/year/2023?lang=th") {
+          URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data {
+               do {
+                 let response = try JSONDecoder().decode([Response].self, from: data)
+                 self.response.accept(response)
+               } catch let error {
+                 print(error)
+               }
             }
-            var result: [Response]?
-            do {
-                result = try JSONDecoder().decode([Response].self, from: data)
-                callBack(result)
-            }
-            catch {
-                print((String(describing: error)))
-            }
-            guard let json = result else {
-                return
-            }
-
-        })
-        task.resume()
+          }.resume()
+       }
     }
     
     func segragation(_ sender: UISegmentedControl) -> String {

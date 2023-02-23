@@ -23,7 +23,15 @@ class CalendarViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         calendarTableView.dataSource = self
         calendarTableView.delegate = self
-        calendarViewModel.getData(url: calendarViewModel.url, callBack: getCalendarCallback)
+//        calendarViewModel.getData(url: calendarViewModel.url, callBack: getCalendarCallback)
+        observeObservable()
+    }
+    
+    private func observeObservable() {
+        calendarViewModel.itemBehaviorSubject.subscribe(onNext: { fruitList in
+            self.fruit = fruitList
+            self.table.reloadData()
+        })
     }
     
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
