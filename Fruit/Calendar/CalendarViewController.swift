@@ -23,7 +23,6 @@ class CalendarViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         calendarTableView.dataSource = self
         calendarTableView.delegate = self
-//        calendarViewModel.getData(url: calendarViewModel.url, callBack: getCalendarCallback)
         observeObservable()
         calendarViewModel.fetchData(url: calendarViewModel.url)
     }
@@ -40,7 +39,6 @@ class CalendarViewController: UIViewController, UITableViewDelegate {
     }
     
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
-//        calendarViewModel.getData(url: calendarViewModel.segragation(sender), callBack: getCalendarCallback)
         calendarViewModel.fetchData(url: calendarViewModel.segragation(sender))
     }
 
@@ -69,9 +67,7 @@ extension CalendarViewController: UITableViewDataSource {
         
         cell.dateLabel.text = calendarViewModel.dateConversion(date: calendarList[indexPath.row].date,
                                                                index: calendarSegmentControl.selectedSegmentIndex)
-        
-//        cell.dateLabel.text = self.calendarList[indexPath.row].date
-                
+                        
         cell.holidayDescriptionLabel.text = self.calendarList[indexPath.row].description
         return cell
     }
