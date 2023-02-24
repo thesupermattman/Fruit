@@ -25,7 +25,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate {
         calendarTableView.delegate = self
 //        calendarViewModel.getData(url: calendarViewModel.url, callBack: getCalendarCallback)
         observeObservable()
-        calendarViewModel.fetchData()
+        calendarViewModel.fetchData(url: calendarViewModel.url)
     }
     
     private func observeObservable() {
@@ -40,7 +40,8 @@ class CalendarViewController: UIViewController, UITableViewDelegate {
     }
     
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
-        calendarViewModel.getData(url: calendarViewModel.segragation(sender), callBack: getCalendarCallback)
+//        calendarViewModel.getData(url: calendarViewModel.segragation(sender), callBack: getCalendarCallback)
+        calendarViewModel.fetchData(url: calendarViewModel.segragation(sender))
     }
 
     private func getCalendarCallback(calendarList: [CalendarViewModel.Response]?) {
@@ -50,9 +51,9 @@ class CalendarViewController: UIViewController, UITableViewDelegate {
         }
     }
     
-//    private func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//        return UITableView.automaticDimension
-//    }
+    private func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }
 
 extension CalendarViewController: UITableViewDataSource {
@@ -65,11 +66,11 @@ extension CalendarViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { // This is to get that cell for each of the rows
         
         let cell = calendarTableView.dequeueReusableCell(withIdentifier: "calendarCell", for: indexPath) as! CalendarTableViewCell
-
-//        cell.dateLabel.text = calendarViewModel.dateConversion(date: calendarList[indexPath.row].date,
-//                                                               index: calendarSegmentControl.selectedSegmentIndex)
         
-        cell.dateLabel.text = self.calendarList[indexPath.row].date
+        cell.dateLabel.text = calendarViewModel.dateConversion(date: calendarList[indexPath.row].date,
+                                                               index: calendarSegmentControl.selectedSegmentIndex)
+        
+//        cell.dateLabel.text = self.calendarList[indexPath.row].date
                 
         cell.holidayDescriptionLabel.text = self.calendarList[indexPath.row].description
         return cell
