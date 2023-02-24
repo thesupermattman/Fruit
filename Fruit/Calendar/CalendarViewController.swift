@@ -25,19 +25,23 @@ class CalendarViewController: UIViewController, UITableViewDelegate {
         calendarTableView.delegate = self
 //        calendarViewModel.getData(url: calendarViewModel.url, callBack: getCalendarCallback)
         observeObservable()
+        calendarViewModel.fetchData()
     }
     
     private func observeObservable() {
-        calendarViewModel.itemBehaviorSubject.subscribe(onNext: { fruitList in
-            self.fruit = fruitList
-            self.table.reloadData()
+        calendarViewModel.response.subscribe(onNext: { dateList in
+            self.calendarList = dateList
+//            self.calendarTableView.reloadData()
+            DispatchQueue.main.async {
+                self.calendarTableView.reloadData()
+            }
+
         })
     }
     
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
         calendarViewModel.getData(url: calendarViewModel.segragation(sender), callBack: getCalendarCallback)
     }
-    
 
     private func getCalendarCallback(calendarList: [CalendarViewModel.Response]?) {
         self.calendarList = calendarList ?? []
@@ -62,10 +66,12 @@ extension CalendarViewController: UITableViewDataSource {
         
         let cell = calendarTableView.dequeueReusableCell(withIdentifier: "calendarCell", for: indexPath) as! CalendarTableViewCell
 
-        cell.dateLabel.text = calendarViewModel.dateConversion(date: calendarList[indexPath.row].date,
-                                                               index: calendarSegmentControl.selectedSegmentIndex)
+//        cell.dateLabel.text = calendarViewModel.dateConversion(date: calendarList[indexPath.row].date,
+//                                                               index: calendarSegmentControl.selectedSegmentIndex)
         
-        cell.holidayDescriptionLabel.text = calendarList[indexPath.row].description
+        cell.dateLabel.text = self.calendarList[indexPath.row].date
+                
+        cell.holidayDescriptionLabel.text = self.calendarList[indexPath.row].description
         return cell
     }
 }

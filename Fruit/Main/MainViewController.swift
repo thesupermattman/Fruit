@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        table.rx.setDelegate(self).disposed(by: bag)
+//        table.rx.setDelegate(self).disposed(by: bag)
         table.delegate = self
         table.dataSource = self
         observeObservable()
